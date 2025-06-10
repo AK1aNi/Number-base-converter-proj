@@ -5,9 +5,10 @@
         static void Main(string[] args)
         {
             Console.WriteLine("What's your denary number: ");
-            int d_num = Convert.ToInt32(Console.ReadLine());
+            int d_num = Convert.ToInt32(Console.ReadLine());        
             Console.WriteLine("What base do you want to convert it to: ");
             int base_n = Convert.ToInt32(Console.ReadLine());
+
             string binary = "";
             if (base_n == 2)
             {
@@ -17,7 +18,7 @@
                     d_num = d_num / 2;
                 }
 
-                Console.WriteLine(d_num+" converted to binary is "+binary);
+                Console.WriteLine(binary);
             }
             string hex = "";
             if (base_n == 16)
@@ -31,30 +32,7 @@
                 }
                 else
                 {
-                    if (first_p == 10)
-                    {
-                        hex = "A" + hex;
-                    }
-                    if (first_p == 11)
-                    {
-                        hex = "B" + hex;
-                    }
-                    if (first_p == 12)
-                    {
-                        hex = "C" + hex;
-                    }
-                    if (first_p == 13)
-                    {
-                        hex = "D" + hex;
-                    }
-                    if (first_p == 14)
-                    {
-                        hex = "E" + hex;
-                    }
-                    if (first_p == 15)
-                    {
-                        hex = "F" + hex;
-                    }
+                    hex = Convert.ToString(Convert.ToChar(first_p + 55)) + hex;
 
                 }
 
@@ -64,35 +42,14 @@
                 }
                 else
                 {
-                    if (remain_p == 10)
-                    {
-                        hex = hex + "A";
-                    }
-                    if (remain_p == 11)
-                    {
-                        hex = hex + "B";
-                    }
-                    if (remain_p == 12)
-                    {
-                        hex = hex + "C";
-                    }
-                    if (remain_p == 13)
-                    {
-                        hex = hex + "D";
-                    }
-                    if (remain_p == 14)
-                    {
-                        hex = hex + "E";
-                    }
-                    if (remain_p == 15)
-                    {
-                        hex = hex + "F";
-                    }
-
+                    hex = hex + Convert.ToString(Convert.ToChar(remain_p + 55));
                 }
 
-                Console.WriteLine(d_num + "converted to hexdecimal is "+hex);
+                Console.WriteLine(hex);
             }
+
+
+           
 
         }
     }
