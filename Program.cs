@@ -27,7 +27,7 @@
 
                 if (first_p < 10)
                 {
-                    hex = first_p + hex;
+                    hex = Convert.ToString(first_p) + hex;
                 }
                 else
                 {
@@ -60,7 +60,7 @@
 
                 if (remain_p < 10)
                 {
-                    hex = hex + remain_p;
+                    hex = hex + Convert.ToString(remain_p);
                 }
                 else
                 {
